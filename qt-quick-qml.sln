@@ -13,6 +13,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rectangle", "rectangle\rect
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "text", "text\text.vcxproj", "{153EFA3A-DF39-4A03-A58F-C51841A88C3F}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "edit", "edit\edit.vcxproj", "{C0C592B9-5692-4998-9B8D-1365E27A7041}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "input", "input\input.vcxproj", "{2B9E94A5-FBE8-4A01-A125-E2C9748E1DA2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mouse-area", "mouse-area\mouse-area.vcxproj", "{2B411CA8-9781-42CF-86E0-568E87C2714C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "keys", "keys\keys.vcxproj", "{FAA76C1D-443B-41C8-ACD5-F57B3463AF5C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -39,6 +47,22 @@ Global
 		{153EFA3A-DF39-4A03-A58F-C51841A88C3F}.Debug|x64.Build.0 = Debug|x64
 		{153EFA3A-DF39-4A03-A58F-C51841A88C3F}.Release|x64.ActiveCfg = Release|x64
 		{153EFA3A-DF39-4A03-A58F-C51841A88C3F}.Release|x64.Build.0 = Release|x64
+		{C0C592B9-5692-4998-9B8D-1365E27A7041}.Debug|x64.ActiveCfg = Debug|x64
+		{C0C592B9-5692-4998-9B8D-1365E27A7041}.Debug|x64.Build.0 = Debug|x64
+		{C0C592B9-5692-4998-9B8D-1365E27A7041}.Release|x64.ActiveCfg = Release|x64
+		{C0C592B9-5692-4998-9B8D-1365E27A7041}.Release|x64.Build.0 = Release|x64
+		{2B9E94A5-FBE8-4A01-A125-E2C9748E1DA2}.Debug|x64.ActiveCfg = Debug|x64
+		{2B9E94A5-FBE8-4A01-A125-E2C9748E1DA2}.Debug|x64.Build.0 = Debug|x64
+		{2B9E94A5-FBE8-4A01-A125-E2C9748E1DA2}.Release|x64.ActiveCfg = Release|x64
+		{2B9E94A5-FBE8-4A01-A125-E2C9748E1DA2}.Release|x64.Build.0 = Release|x64
+		{2B411CA8-9781-42CF-86E0-568E87C2714C}.Debug|x64.ActiveCfg = Debug|x64
+		{2B411CA8-9781-42CF-86E0-568E87C2714C}.Debug|x64.Build.0 = Debug|x64
+		{2B411CA8-9781-42CF-86E0-568E87C2714C}.Release|x64.ActiveCfg = Release|x64
+		{2B411CA8-9781-42CF-86E0-568E87C2714C}.Release|x64.Build.0 = Release|x64
+		{FAA76C1D-443B-41C8-ACD5-F57B3463AF5C}.Debug|x64.ActiveCfg = Debug|x64
+		{FAA76C1D-443B-41C8-ACD5-F57B3463AF5C}.Debug|x64.Build.0 = Debug|x64
+		{FAA76C1D-443B-41C8-ACD5-F57B3463AF5C}.Release|x64.ActiveCfg = Release|x64
+		{FAA76C1D-443B-41C8-ACD5-F57B3463AF5C}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
