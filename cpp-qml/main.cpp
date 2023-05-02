@@ -3,6 +3,8 @@
 #include <QQmlContext>
 #include <QScreen>
 
+#include "MyObject.h"
+
 int main(int argc, char* argv[])
 {
 #if defined(Q_OS_WIN)
@@ -21,6 +23,9 @@ int main(int argc, char* argv[])
 
 	// 设置全局属性
 	context->setContextProperty("SCREEN_WIDTH", 600);
+	context->setContextProperty("MyObject", MyObject::getObj());
+
+	qmlRegisterType<MyObject>("MyObject", 1, 0, "MyObject");
 
 	engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 	if (engine.rootObjects().isEmpty())

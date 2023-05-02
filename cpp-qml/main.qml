@@ -1,5 +1,6 @@
 import QtQuick 2.9
 import QtQuick.Window 2.2
+import MyObject 1.0
 
 Window {
     visible: true
@@ -15,6 +16,16 @@ Window {
         Component.onCompleted: {
             console.log("Rectangle completed myInt = ", myInt);
         }
+    }
+
+    MyObject {
+        myInt:100
+        myStr:"my obj"
+
+         Component.onCompleted: {
+            console.log("MyObject completed myInt = ", myInt, " mystr = '", myStr, "'");
+        }
+
     }
 
 }
