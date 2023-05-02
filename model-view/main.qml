@@ -8,6 +8,7 @@ Window {
     title: qsTr("model-view")
 
     Item {
+        anchors.fill: parent;
         ListModel {
             id: listModel;
             ListElement { type:"Dog"; age:8}

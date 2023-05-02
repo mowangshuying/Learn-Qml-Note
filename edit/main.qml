@@ -15,3 +15,7 @@ Window {
         //border.width:1;
     }
 }
+
+// CreateFile() -> file
+// input -> recv
+// output -> send
