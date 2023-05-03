@@ -16,7 +16,6 @@ Window {
 
     MyRectangle {
         myInt:100
-
         Component.onCompleted: {
             console.log("Rectangle completed myInt = ", myInt);
         }
@@ -33,16 +32,28 @@ Window {
     }
 
     Button {
+        x:100
+        y:249
+        text: "change myObj.myInt"
         onClicked: {
             myObj.myInt += 1;
             console.log("btn clicked!");
         }
     }
 
+    Button {
+        x:249;
+        y:249;
+        text: "call func"
+        onClicked: {
+            myObj.myFunc();
+        }
+    }
+
     onWidthChanged: {
         console.log("myWidth = ", myWidth);
       //  console.log("myObjectInt = ", myObj.myInt);
-          console.log("myObjectInt = ", myObjectInt);
+      //    console.log("myObjectInt = ", myObjectInt);
     }
 
     onMyObjectIntChanged: {

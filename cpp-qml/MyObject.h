@@ -2,6 +2,7 @@
 
 #include <QString>
 #include <QObject>
+#include <QDebug>
 
 class MyObject : public QObject
 {
@@ -22,6 +23,8 @@ public:
 	void setMyStr(QString myStr);
 
 	QString getMyStr();
+
+	Q_INVOKABLE void myFunc();
 
 signals:
 	void myIntChanged(int myInt);

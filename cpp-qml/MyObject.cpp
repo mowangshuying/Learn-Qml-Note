@@ -35,6 +35,11 @@ QString MyObject::getMyStr()
 	return m_myStr;
 }
 
+void MyObject::myFunc()
+{
+	qDebug() << __FUNCTION__;
+}
+
 void MyObject::cppSlot()
 {
 
