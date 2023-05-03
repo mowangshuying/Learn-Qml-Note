@@ -29,7 +29,7 @@ public:
 signals:
 	void myIntChanged(int myInt);
 	void myStrChanged(QString myStr);
-
+	void cppSig(int i, QString str);
 public:
 	Q_PROPERTY(int myInt READ getMyInt WRITE setMyInt NOTIFY myIntChanged);
 	Q_PROPERTY(QString myStr READ getMyStr WRITE setMyStr NOTIFY myStrChanged);

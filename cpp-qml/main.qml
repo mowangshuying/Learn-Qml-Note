@@ -18,6 +18,10 @@ Window {
 
     signal qmlSig(int i, string s);
 
+    function qmlSlot(i, s) {
+        console.log("qmlSlot: i = ", i , " s = ", s)
+    }
+
     MyRectangle {
         myInt:100
         Component.onCompleted: {
@@ -68,6 +72,16 @@ Window {
         }
     }
 
+    Button {
+        x:100;
+        y:350;
+        text: "qml emit cpp sig"
+        onClicked: {
+            console.log("qml emit cpp sig");
+            myObj.cppSig(99, "lisi");
+        }
+    }
+
     onWidthChanged: {
         console.log("myWidth = ", myWidth);
       //  console.log("myObjectInt = ", myObj.myInt);
@@ -81,6 +95,7 @@ Window {
     Component.onCompleted: {
         myWidth = 600;
         qmlSig.connect(myObj.cppSlot);
+        myObj.cppSig.connect(qmlSlot);
     }
 
     
