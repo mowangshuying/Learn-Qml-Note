@@ -6,6 +6,7 @@ import QtQuick.Controls 2.12
 Window {
     id: "window"
 // 冒号初始化为动态绑定
+    objectName: "window"
     property int myWidth:width
     property int myObjectInt: myObj.myInt
     visible: true
@@ -54,6 +55,8 @@ Window {
     }
 
    Button {
+        id: qmlEmitSignalBtn
+        objectName: "qmlEmitSignalBtn"
         x:400;
         y:249;
         text: "qml emit signal"

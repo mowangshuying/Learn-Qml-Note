@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QScreen>
+#include <QObject>
 
 #include "MyObject.h"
 
@@ -31,8 +32,13 @@ int main(int argc, char* argv[])
 	if (engine.rootObjects().isEmpty())
 		return -1;
 
+	// c++端绑定信号和槽函数
+	qDebug() << "first objectName:" << engine.rootObjects().first()->objectName();
 	// engine加载完毕之后
-	auto list = engine.rootObjects();
+	auto objWnd = engine.rootObjects().first();
+	auto objBtn = engine.rootObjects().first()->findChild<QObject*>("qmlEmitSignalBtn");
+	qDebug() << objBtn->objectName();
+	QObject::connect(objWnd, SIGNAL(qmlSig(int, QString)), MyObject::getObj(), SLOT(cppSlot(int, QString)));
 
 	return app.exec();
 }
