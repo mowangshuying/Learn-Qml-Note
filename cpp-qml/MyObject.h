@@ -1,7 +1,7 @@
 #pragma once
 
-#include <qobject.h>
 #include <QString>
+#include <QObject>
 
 class MyObject : public QObject
 {
@@ -24,8 +24,8 @@ public:
 	QString getMyStr();
 
 signals:
-	void myIntChanged();
-	void myStrChanged();
+	void myIntChanged(int myInt);
+	void myStrChanged(QString myStr);
 
 public:
 	Q_PROPERTY(int myInt READ getMyInt WRITE setMyInt NOTIFY myIntChanged);

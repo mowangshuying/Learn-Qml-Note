@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
 	//QRect screenRect = screen->virtualGeometry();
 	//context->setContextProperty("SCREEN_WIDTH", screenRect.width());
 
-	// 设置全局属性
+	// 设置全局属性, 作用于全局 重名会被隐藏
 	context->setContextProperty("SCREEN_WIDTH", 600);
 	context->setContextProperty("MyObject", MyObject::getObj());
 
