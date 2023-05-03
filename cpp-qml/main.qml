@@ -22,6 +22,10 @@ Window {
         console.log("qmlSlot: i = ", i , " s = ", s)
     }
 
+    function qmlFunc(i, s) {
+        return "success";
+    }
+
     MyRectangle {
         myInt:100
         Component.onCompleted: {

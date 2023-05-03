@@ -40,5 +40,11 @@ int main(int argc, char* argv[])
 	qDebug() << objBtn->objectName();
 	QObject::connect(objWnd, SIGNAL(qmlSig(int, QString)), MyObject::getObj(), SLOT(cppSlot(int, QString)));
 
+	QVariant res;
+	QVariant arg1 = 123;
+	QVariant arg2 = "zhangshang";
+	QMetaObject::invokeMethod(objWnd, "qmlFunc", Q_RETURN_ARG(QVariant, res), Q_ARG(QVariant, arg1), Q_ARG(QVariant, arg2));
+	qDebug() << "qmlFunc res = " << res;
+
 	return app.exec();
 }
