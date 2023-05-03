@@ -40,7 +40,8 @@ void MyObject::myFunc()
 	qDebug() << __FUNCTION__;
 }
 
-void MyObject::cppSlot()
+//void         cppSlot(int i, QString str);
+void MyObject::cppSlot(int i, QString str)
 {
-
+	qDebug() << __FUNCTION__ << " i = " << i << " str = " << str;
 }

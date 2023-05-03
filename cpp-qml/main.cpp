@@ -31,5 +31,8 @@ int main(int argc, char* argv[])
 	if (engine.rootObjects().isEmpty())
 		return -1;
 
+	// engine加载完毕之后
+	auto list = engine.rootObjects();
+
 	return app.exec();
 }

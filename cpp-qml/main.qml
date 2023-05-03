@@ -4,6 +4,7 @@ import MyObject 1.0
 import QtQuick.Controls 2.12
 
 Window {
+    id: "window"
 // 冒号初始化为动态绑定
     property int myWidth:width
     property int myObjectInt: myObj.myInt
@@ -14,6 +15,8 @@ Window {
     height: 480
     title: qsTr("cpp-qml")
 
+    signal qmlSig(int i, string s);
+
     MyRectangle {
         myInt:100
         Component.onCompleted: {
@@ -22,7 +25,7 @@ Window {
     }
 
     MyObject {
-        id: myObj
+        id: "myObj"
         myInt:100
         myStr:"my obj"
         Component.onCompleted: {
@@ -50,6 +53,18 @@ Window {
         }
     }
 
+   Button {
+        x:400;
+        y:249;
+        text: "qml emit signal"
+        onClicked: {
+            //myObj.myFunc();
+            console.log("qml emit signal clicked");
+            qmlSig(10, "zhangshang");
+            //window.qmlSig(10, "zhangshang");
+        }
+    }
+
     onWidthChanged: {
         console.log("myWidth = ", myWidth);
       //  console.log("myObjectInt = ", myObj.myInt);
@@ -62,6 +77,20 @@ Window {
 
     Component.onCompleted: {
         myWidth = 600;
+        qmlSig.connect(myObj.cppSlot);
     }
+
+    
+   //Connections {
+   //     target: window
+   //     function onQmlSig(i, s) {
+   //         console.log("onQmlSig");
+   //         myObj.cppSlot(i, s);
+   //     }
+   // }
+
+   // onQmlSig(i, s) {
+   //     console.log("onQmlSig");
+   // }
 
 }

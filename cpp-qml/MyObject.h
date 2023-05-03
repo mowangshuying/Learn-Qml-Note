@@ -35,7 +35,7 @@ public:
 	Q_PROPERTY(QString myStr READ getMyStr WRITE setMyStr NOTIFY myStrChanged);
 
 public slots:
-	void cppSlot();
+	void cppSlot(int i, QString str);
 private:
 	QString m_myStr;
 	int m_myInt;
